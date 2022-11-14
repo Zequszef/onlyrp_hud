@@ -1,0 +1,311 @@
+<html>
+
+<head>
+	
+    <!-- <div class="watermark">
+        <div class="background"></div>
+        <div class="name">OnlyRP</div>
+        <img src="./img/logo.png" alt="">
+        <div id="player-counter"></div>
+    </div> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" integrity="sha512-jQqzj2vHVxA/yCojT8pVZjKGOe9UmoYvnOuM/2sQ110vxiajBU+4WkyRs1ODMmd4AfntwUEV4J+VfM6DkfjLRg==" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="start_load()">
+
+	
+
+
+<div class="contin">
+	
+	<notification-box>
+	</notification-box>
+	<div id="hud" style="border: 2px solid purple; border-right: 0px;">
+		<ul>
+			<li id="hp">
+				<svg height="27" viewBox="0 0 24 24" width="27" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+							<stop offset="100%" style="stop-color:var(--main--color);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#grad1)"
+						d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"				</svg>
+				</svg>
+			</li>
+			<li id="armor">
+				<svg height="25" viewBox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="grad2" x1="0%" y1="100%" x2="0%" y2="0%">
+							<stop offset="100%" style="stop-color:var(--main--color);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#grad2)"
+						d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />				
+				</svg>
+			</li>
+			<li id="oxygen">
+				<svg height="24" width="24" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="485.02"
+					viewBox="0 0 485.021 485.02" xml:space="preserve">
+					<defs>
+						<linearGradient id="grad5" x1="0%" y1="100%" x2="0%" y2="0%">
+							<stop offset="100%" style="stop-color:var(--main--color);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#grad5)"
+						d="M448.953 278.214c-32.771-59.499-100.506-128.657-138.716-128.657-2.397 0-4.692.27-6.815.811-13.386 3.403-21.562 12.407-26.324 22.701 0 0-11.133-5.795-11.133-12.849V18.469a4.41 4.41 0 0 0-4.41-4.41H223.463a4.41 4.41 0 0 0-4.409 4.41V160.22c0 7.446-11.134 12.849-11.134 12.849-4.765-10.294-12.938-19.298-26.321-22.701-2.123-.541-4.419-.811-6.82-.811-38.208 0-105.939 69.158-138.714 128.657-28.63 51.973-40.304 103.495-34.7 153.131 2.466 21.845 28.022 39.616 56.97 39.616 14.983 0 43.402-4.881 67.454-37.109 5.53.56 10.857.842 15.876.842h.007c23.904 0 42.224-6.365 54.449-18.925 18.564-19.066 17.507-50.058 17.507-58.579 0-8.522.055-118.062.055-125.583s22.415-31.771 28.828-31.771 28.849 22.962 28.826 31.771c-.023 8.809.055 116.593.055 125.583 0 8.989-1.06 39.513 17.506 58.579 12.229 12.56 30.547 18.925 54.451 18.925h.008c5.019 0 10.347-.282 15.877-.842 24.052 32.229 52.468 37.109 67.453 37.109 28.945 0 54.502-17.771 56.972-39.616 5.599-49.636-6.077-101.158-34.706-153.131z" />
+				</svg>
+			</li>
+			<li id="sound">
+				<svg id="voice-glow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+					xmlns:v="https://vecta.io/nano">
+					<defs>
+						<linearGradient id="grad7" x1="0%" y1="100%" x2="0%" y2="0%">
+							<stop offset="100%" style="stop-color:var(--main--color);stop-opacity:1" />
+							<stop offset="100%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#grad7)"
+						d="M237.541 328.897c25.128 0 46.632-8.946 64.523-26.83s26.833-39.399 26.833-64.525V91.365c0-25.126-8.938-46.632-26.833-64.525S262.669 0 237.541 0s-46.632 8.951-64.524 26.84-26.838 39.399-26.838 64.525v146.177c0 25.125 8.949 46.641 26.838 64.525s39.399 26.83 64.524 26.83zM396.563 188.15c-3.606-3.617-7.898-5.426-12.847-5.426s-9.226 1.809-12.847 5.426c-3.613 3.616-5.421 7.898-5.421 12.845v36.547c0 35.214-12.518 65.333-37.548 90.362-25.022 25.03-55.145 37.545-90.36 37.545s-65.334-12.515-90.365-37.545c-25.028-25.022-37.541-55.147-37.541-90.362v-36.547c0-4.947-1.809-9.229-5.424-12.845s-7.895-5.426-12.847-5.426-9.235 1.809-12.85 5.426-5.426 7.898-5.426 12.845v36.547c0 42.065 14.04 78.659 42.112 109.776s62.762 48.961 104.068 53.526v37.691h-73.089c-4.949 0-9.231 1.811-12.847 5.428s-5.426 7.898-5.426 12.847c0 4.941 1.809 9.233 5.426 12.847s7.898 5.428 12.847 5.428h182.719c4.948 0 9.236-1.813 12.847-5.428 3.621-3.613 5.431-7.905 5.431-12.847 0-4.948-1.81-9.232-5.431-12.847-3.61-3.617-7.898-5.428-12.847-5.428h-73.08v-37.691c41.299-4.565 75.985-22.408 104.061-53.526s42.12-67.711 42.12-109.776v-36.547c0-4.946-1.813-9.225-5.435-12.845z" />
+				</svg>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="cinema">
+	<div class="gora"></div>
+	<div class="dol"></div>
+</div>
+</div>
+	<div class="hudedit">
+		<div class="title">Ustawienia</div>
+		<div class="hudedits">
+			<div class="menu">
+				<div class="option-1 option" onclick="str1()">
+					<?xml version="1.0" standalone="no"?>
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+					 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+					 width="34px" height="34px" viewBox="0 0 16 16"
+					 preserveAspectRatio="xMidYMid meet">
+					<g fill="#fff" stroke="none">
+					<path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
+					</g>
+					</svg>
+				</div>
+				<div class="option-2 option" onclick="str2()"><?xml version="1.0" standalone="no"?>
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+					 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+					 width="40px" height="40px" viewBox="0 0 1024 1024"
+					 preserveAspectRatio="xMidYMid meet">
+					<g fill="#fff" stroke="none">
+					<path d="M806.416 234.666c-8.542-25.604-32-42.666-59.75-42.666H277.334c-27.75 0-51.208 17.062-59.75 42.666L128 469.334v320C128 812.792 147.208 832 170.666 832
+					 h42.668c23.458 0 42.666-19.208 42.666-42.666V768h512v21.334c0 23.458 19.208 42.666 42.666 42.666h42.668c23.458 0 42.666-19.208 42.666-42.666v-320l-89.584-234.668zM
+					 277.334 640c-36.25 0-64-27.73-64-64s27.75-64 64-64 64 27.732 64 64-27.75 64-64 64z m469.332 0c-36.25 0-64-27.73-64-64s27.75-64 64-64 64 27.732 64 64-27.75 64-64 64zM
+					 213.334 426.666l64-170.666h469.332l64 170.666H213.334z"/>
+					
+					</g>
+					</svg>
+				</div>
+				<div class="option-3 option" onclick="str3()">
+					<?xml version="1.0" standalone="no"?>
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+					 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+					 width="30px" height="30px" viewBox="0 0 16 16"
+					 preserveAspectRatio="xMidYMid meet">
+					<g fill="#fff" stroke="none">
+					<path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+					</g>
+					</svg>
+				</div>
+				<div class="option-4 option" onclick="str4()">
+					<?xml version="1.0" standalone="no"?>
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+					 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+					 width="28px" height="28px" viewBox="0 0 16 16"
+					 preserveAspectRatio="xMidYMid meet">
+					<g fill="#fff" stroke="none">
+					<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+					</g>
+					</svg>
+				</div>
+				<div class="option-5 option" onclick="end()">
+					<?xml version="1.0" standalone="no"?>
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+					 "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+					<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+					 width="28px" height="28px" viewBox="0 0 16 16"
+					 preserveAspectRatio="xMidYMid meet">
+					<g fill="#fff" stroke="none">
+					  <path d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+					  <path d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>					
+					  </g>
+					</svg>
+				</div>
+			</div>
+			<div class="edit-hud">
+				<div class="cont-hud" id="ch1">
+					<h2 id="hh2a" style="padding:10px 0; font-weight:500; color: var(--main--color);">
+						Ustawienia hudu
+					</h2>
+					<div>
+						<span class="kolorek" style="top: 20px;">Kolor przewodni</span>
+						<input id="hud-color" onchange="kolorek()" value="#6a00ff" input type="color" >
+					</div>
+					<div>
+						<span>Zmiana pozycji hudu</span>
+						<input type="checkbox" id="checkbox-position" />
+					</div>
+					<div>
+						<span>Ukryj hud</span>
+						<input type="checkbox" id="checkbox-hud" />
+					</div>
+				</div>
+				<div class="cont-hud" id="ch2" style="display: none;">
+					<h2 id="hh2a" style="padding:10px 0; font-weight:500; color: var(--main--color);">
+						Ustawienia carhudu
+					</h2>
+					<div>
+						<span>Zmień wariant carhudu</span>
+						<input type="checkbox" id="checkbox-wariant" />
+					</div>
+					<div>
+						<span>Ukryj carhud</span>
+						<input  type="checkbox" id="checkbox-car" />
+					</div>
+				</div>
+				<div class="cont-hud" id="ch3" style="display: none;">
+					<h2 id="hh2a" style="padding:10px 0; font-weight:500; color: var(--main--color);">
+						Elementy hudu
+					</h2>
+					<div>
+						<span>Ukrywanie poziomu życia</span>
+						<input type="checkbox" id="checkbox-hp" />
+					</div>
+					<div>
+						<span>Ukrywanie poziomu armoru</span>
+						<input type="checkbox" id="checkbox-armor" />
+					</div>
+					<div>
+						<span>Ukrywanie poziomu głodu</span>
+						<input type="checkbox" id="checkbox-food" />
+					</div>
+					<div>
+						<span>Ukrywanie poziomu pragnienia</span>
+							<input type="checkbox" id="checkbox-water" />
+					</div>
+					<div>
+						<span>Ukrywanie poziomu tlenu</span>
+							<input type="checkbox" id="checkbox-stamina" />
+					</div>
+					<div>
+						<span>Ukrywanie poziomu mówienia</span>
+							<input type="checkbox" id="checkbox-voice" />
+					</div>
+				</div>
+				<div class="cont-hud" id="ch4" style="display: none;">
+					<h2 id="hh2a" style="padding:10px 0; font-weight:500; color: var(--main--color);">
+						Dodatki
+					</h2>
+					<div>
+						<span>Tryb kinowy</span>
+							<input type="checkbox" id="checkbox-cinema" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="speedometer">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="speedometer-part black">
+            <path class="circle" stroke-dasharray="82, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="speedometer-part">
+            <path class="circle speed" stroke-dasharray="82, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg>
+		<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 36 36" class="speedometer-part tacho">
+			<defs>
+				<linearGradient id="tachograd" x1="0%" y1="0%" x2="0%" y2="100%">
+					<stop offset="0%" style="stop-color:var(--main--color);stop-opacity:1" />
+					<stop offset="100%" style="stop-color:var(--main--color);stop-opacity:1"/>
+				</linearGradient>
+			</defs>
+			<path class="circle" stroke-dasharray="82, 100" d="M18 2.0845
+					a 15.9155 15.9155 0 0 1 0 31.831
+					a 15.9155 15.9155 0 0 1 0 -31.831" />
+		</svg>
+		<div class="speedometer-digital">
+			<p class="speed-digital">000</p>
+			<p class="speed-unit">KMPH</p>
+		</div>
+	</div>
+	
+	<div class='carhud' style="display: none;">
+		<div class='carhud__row'>
+			<i class="fa-solid fa-location-dot"></i> <span id='carhud__row--map'>Wyłączony</span> 
+			<i class="fa-solid fa-person-seat"></i> <span id='carhud__row--belts'>TAK</span>
+		</div>
+		<div class='carhud__row'>
+			<span id='carhud__row--dir'></span>
+		</div>
+		<div class='carhud__row'>
+			<span id='carhud__row--sl'></span>
+		</div>
+		<div class='carhud__row'>
+			<span class='carhud__row--kmh'>230</span><span class='carhud__row--kmph'>KMPH</span>
+			<div class='carhud__row--bar'>
+				<div class='carhud__row--bar__progress'></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="213xd">
+		<div class="helpnoity-main">
+			<span class="helpnoity-main-content"></span>
+		</div>
+		
+		<div class="streetlabel-main">
+			<div class="streetlabel-main-items">
+				<span class="streetlabel-main-street"></span>
+				<span class="streetlabel-main-direction">N</span>
+			</div>
+		</div>
+</div>
+
+</body>
+</html>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>	
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/4.0.10/dotdotdot.js'></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>	
+<script src="index.js"></script>
+<script type="text/javascript" src="index.js">
+	tippy('[data-tippy-content]', {
+		animation: 'scale',
+		arrow: true,
+		theme: 'tooltip'
+	});
+</script>
